@@ -1,13 +1,51 @@
-body {
-  margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
-    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
-    sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
+@import url('https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@500&display=swap');
+html {
+  box-sizing: border-box;
 }
-
-code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
-    monospace;
+*,
+*::before,
+*::after {
+  margin: 0;
+  padding: 0;
+  box-sizing: inherit;
+}
+body {
+  font-family: 'Noto Sans JP', sans-serif;
+}
+button {
+  font-family: inherit;
+}
+.game {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  margin-top: 20px;
+}
+.game > *:not(:last-child) {
+  margin-bottom: 10px;
+}
+.board {
+  width: 300px;
+  display: flex;
+  flex-wrap: wrap;
+}
+.board > button {
+  width: 100px;
+  height: 100px;
+  display: grid;
+  place-content: center;
+  font-size: 2rem;
+}
+.restart {
+  padding: 0.8em 1.6em;
+  font-size: 1rem;
+}
+.moves {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+}
+.moves li button {
+  width: 100%;
 }
