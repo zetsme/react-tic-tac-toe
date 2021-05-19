@@ -1,10 +1,10 @@
-import { useState } from 'react';
 import Board from './Board';
 import { calculateNextValue, calculateStatus, calculateWinner } from './utils';
+import { useLocalStorage } from './useLocalStorage';
 
 const App = () => {
-  const [currentStep, setCurrentStep] = useState(0);
-  const [history, setHistory] = useState([Array(9).fill(null)]);
+  const [currentStep, setCurrentStep] = useLocalStorage('step', 0);
+  const [history, setHistory] = useLocalStorage('history', [Array(9).fill(null)]);
 
   const currentSquare = history[currentStep];
 
